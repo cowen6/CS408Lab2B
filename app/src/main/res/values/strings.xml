@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CS 408 Lab 2B</string>
+    <string name="celsius">Celsius:</string>
+    <string name="convert">Convert</string>
+    <string name="fahrenheit">Fahrenheit:</string>
+    <string name="temp_in_celsius">Temp. in Celsius</string>
+    <string name="temp_in_fahrenheit">Temp. in Fahrenheit</string>
+</resources>
