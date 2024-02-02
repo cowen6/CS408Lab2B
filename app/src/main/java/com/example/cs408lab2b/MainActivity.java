@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.example.cs408lab2b.databinding.ActivityMainBinding;
 
@@ -32,14 +31,17 @@ public class MainActivity extends AppCompatActivity {
                 boolean cempty = cText.getText().toString().isEmpty();
 
                 if(!fempty) { //F given (Default) ; Convert: F->C
+                    Log.i(TAG, "Convert F -> C");
                     float F = Float.parseFloat(fText.getText().toString());
-                    float conversion = (F - 32) * (5/9);
-                    cText.setText(String.valueOf(conversion));
+                    Log.d(TAG, "F: " + F);
+                    Float conversion = ((F - 32) * 5)/9;
+                    cText.setText(conversion.toString());
                 }
                 else if(fempty && !cempty) { //F empty, C given ; Convert: F<-C
+                    Log.i(TAG, "Convert F <- C");
                     float C = Float.parseFloat(cText.getText().toString());
-                    float conversion = (C * (9/5)) + 32;
-                    fText.setText(String.valueOf(conversion));
+                    Float conversion = (C * (float)1.8) + 32;
+                    fText.setText(conversion.toString());
                 }
 
             }
